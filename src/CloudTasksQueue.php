@@ -267,8 +267,16 @@ class CloudTasksQueue extends LaravelQueue implements QueueContract
                 throw new Exception('Something went wrong parsing the route.');
             }
 
-            $appEngineRequest = new AppEngineHttpRequest;
-            $appEngineRequest->setRelativeUri($path);
+            //if we have a
+            if (static::$handlerUrlCallback) {
+                $appEngineRequest = new HttpRequest;
+                $appEngineRequest->setUrl($this->getHandler($job));
+            } else {
+                $appEngineRequest = new AppEngineHttpRequest;
+                $appEngineRequest->setRelativeUri($path);
+
+            }
+
             $appEngineRequest->setHttpMethod(HttpMethod::POST);
             $appEngineRequest->setBody(json_encode($payload));
             $appEngineRequest->setHeaders($headers);
