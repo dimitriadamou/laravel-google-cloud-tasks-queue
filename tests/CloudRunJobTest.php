@@ -15,9 +15,9 @@ use Google\Cloud\Tasks\V2\HttpMethod;
 use Illuminate\Support\Facades\Event;
 use PHPUnit\Framework\Attributes\Test;
 use Illuminate\Support\Facades\Storage;
-use Stackkit\LaravelGoogleCloudTasksQueue\IncomingTask;
-use Stackkit\LaravelGoogleCloudTasksQueue\CloudTasksApi;
-use Stackkit\LaravelGoogleCloudTasksQueue\CloudTasksQueue;
+use dimitriadamou\LaravelGoogleCloudTasksQueue\IncomingTask;
+use dimitriadamou\LaravelGoogleCloudTasksQueue\CloudTasksApi;
+use dimitriadamou\LaravelGoogleCloudTasksQueue\CloudTasksQueue;
 
 class CloudRunJobTest extends TestCase
 {
@@ -50,7 +50,7 @@ class CloudRunJobTest extends TestCase
         // Dispatch the job to get the payload format
         $payload = null;
 
-        Event::listen(\Stackkit\LaravelGoogleCloudTasksQueue\Events\TaskCreated::class, function ($event) use (&$payload) {
+        Event::listen(\dimitriadamou\LaravelGoogleCloudTasksQueue\Events\TaskCreated::class, function ($event) use (&$payload) {
             $request = $event->task->getHttpRequest() ?? $event->task->getAppEngineHttpRequest();
             $payload = $request->getBody();
         });

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Stackkit\LaravelGoogleCloudTasksQueue;
+namespace dimitriadamou\LaravelGoogleCloudTasksQueue;
 
 use Exception;
 
@@ -12,7 +12,7 @@ use Safe\Exceptions\JsonException;
 use Illuminate\Container\Container;
 use Illuminate\Queue\Jobs\Job as LaravelJob;
 use Illuminate\Contracts\Queue\Job as JobContract;
-use Stackkit\LaravelGoogleCloudTasksQueue\Events\JobReleased;
+use dimitriadamou\LaravelGoogleCloudTasksQueue\Events\JobReleased;
 
 /**
  * @phpstan-type JobShape array{

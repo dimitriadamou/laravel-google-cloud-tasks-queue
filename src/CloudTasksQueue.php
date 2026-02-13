@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Stackkit\LaravelGoogleCloudTasksQueue;
+namespace dimitriadamou\LaravelGoogleCloudTasksQueue;
 
 use Closure;
 use Exception;
@@ -25,7 +25,7 @@ use Illuminate\Queue\Queue as LaravelQueue;
 use Google\Cloud\Tasks\V2\AppEngineHttpRequest;
 use Google\Cloud\Tasks\V2\Client\CloudTasksClient;
 use Illuminate\Contracts\Queue\Queue as QueueContract;
-use Stackkit\LaravelGoogleCloudTasksQueue\Events\TaskCreated;
+use dimitriadamou\LaravelGoogleCloudTasksQueue\Events\TaskCreated;
 
 /**
  * @phpstan-import-type QueueConfig from CloudTasksConnector

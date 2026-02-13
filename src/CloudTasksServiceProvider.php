@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Stackkit\LaravelGoogleCloudTasksQueue;
+namespace dimitriadamou\LaravelGoogleCloudTasksQueue;
 
 use Illuminate\Routing\Router;
 use Illuminate\Events\Dispatcher;
@@ -12,9 +12,9 @@ use Illuminate\Queue\Events\JobFailed;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Queue\Events\JobExceptionOccurred;
 use Google\Cloud\Tasks\V2\Client\CloudTasksClient;
-use Stackkit\LaravelGoogleCloudTasksQueue\Events\JobReleased;
+use dimitriadamou\LaravelGoogleCloudTasksQueue\Events\JobReleased;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
-use Stackkit\LaravelGoogleCloudTasksQueue\Commands\WorkCloudRunJob;
+use dimitriadamou\LaravelGoogleCloudTasksQueue\Commands\WorkCloudRunJob;
 
 class CloudTasksServiceProvider extends LaravelServiceProvider
 {

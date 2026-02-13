@@ -28,10 +28,10 @@ use Illuminate\Queue\Events\JobProcessing;
 use Tests\Support\SimpleJobWithDelayProperty;
 use Tests\Support\FailingJobWithExponentialBackoff;
 use Illuminate\Queue\Events\JobReleasedAfterException;
-use Stackkit\LaravelGoogleCloudTasksQueue\IncomingTask;
-use Stackkit\LaravelGoogleCloudTasksQueue\CloudTasksApi;
-use Stackkit\LaravelGoogleCloudTasksQueue\CloudTasksQueue;
-use Stackkit\LaravelGoogleCloudTasksQueue\Events\JobReleased;
+use dimitriadamou\LaravelGoogleCloudTasksQueue\IncomingTask;
+use dimitriadamou\LaravelGoogleCloudTasksQueue\CloudTasksApi;
+use dimitriadamou\LaravelGoogleCloudTasksQueue\CloudTasksQueue;
+use dimitriadamou\LaravelGoogleCloudTasksQueue\Events\JobReleased;
 
 class QueueTest extends TestCase
 {

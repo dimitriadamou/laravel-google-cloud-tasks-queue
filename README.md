@@ -253,7 +253,7 @@ gcloud iam service-accounts add-iam-policy-binding $SA_EMAIL \
 You can pass headers to a task using the `setTaskHeadersUsing` method on the `CloudTasksQueue` class:
 
 ```php
-use Stackkit\LaravelGoogleCloudTasksQueue\CloudTasksQueue;
+use dimitriadamou\LaravelGoogleCloudTasksQueue\CloudTasksQueue;
 
 CloudTasksQueue::setTaskHeadersUsing(static fn() => [
   'X-My-Header' => 'My-Value',
@@ -287,7 +287,7 @@ CloudTasksQueue::configureHandlerUrlUsing(static fn(MyJob $job) => 'https://exam
 Customize worker options using the `configureWorkerOptionsUsing` method:
 
 ```php
-use Stackkit\LaravelGoogleCloudTasksQueue\IncomingTask;
+use dimitriadamou\LaravelGoogleCloudTasksQueue\IncomingTask;
 
 CloudTasksQueue::configureWorkerOptionsUsing(function (IncomingTask $task) {
     $queueTries = [
