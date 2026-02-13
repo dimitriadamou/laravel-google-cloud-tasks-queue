@@ -287,7 +287,11 @@ class CloudTasksQueue extends LaravelQueue implements QueueContract
             $appEngineRequest->setBody(json_encode($payload));
             $appEngineRequest->setHeaders($headers);
 
-            $task->setAppEngineHttpRequest($appEngineRequest);
+            if (static::$handlerUrlCallback) {
+                $task->setHttpRequest($appEngineRequest);
+            } else {
+                $task->setAppEngineHttpRequest($appEngineRequest);
+            }
         } elseif (! empty($this->config['cloud_run_job'])) {
             // Cloud Run Job target - call the Cloud Run Jobs execution API
             $httpRequest = new HttpRequest;
