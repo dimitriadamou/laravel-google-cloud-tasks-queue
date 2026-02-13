@@ -9,8 +9,8 @@ use Tests\Support\DispatchedJob;
 use Illuminate\Support\Facades\Event;
 use Google\Cloud\Tasks\V2\Client\CloudTasksClient;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Stackkit\LaravelGoogleCloudTasksQueue\Events\TaskCreated;
-use Stackkit\LaravelGoogleCloudTasksQueue\CloudTasksServiceProvider;
+use dimitriadamouLaravelGoogleCloudTasksQueue\Events\TaskCreated;
+use dimitriadamouLaravelGoogleCloudTasksQueue\CloudTasksServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {

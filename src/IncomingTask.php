@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Stackkit\LaravelGoogleCloudTasksQueue;
+namespace dimitriadamouLaravelGoogleCloudTasksQueue;
 
 use Error;
 use Exception;

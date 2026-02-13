@@ -7,7 +7,7 @@ namespace Tests;
 use Tests\Support\SimpleJob;
 use Google\Cloud\Tasks\V2\Task;
 use PHPUnit\Framework\Attributes\Test;
-use Stackkit\LaravelGoogleCloudTasksQueue\CloudTasksApi;
+use dimitriadamouLaravelGoogleCloudTasksQueue\CloudTasksApi;
 
 class QueueAppEngineTest extends TestCase
 {

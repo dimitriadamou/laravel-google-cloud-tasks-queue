@@ -20,9 +20,9 @@ use Tests\Support\FailingJobWithRetryUntil;
 use Tests\Support\FailingJobWithUnlimitedTries;
 use Illuminate\Queue\Events\JobReleasedAfterException;
 use Tests\Support\FailingJobWithMaxTriesAndRetryUntil;
-use Stackkit\LaravelGoogleCloudTasksQueue\IncomingTask;
-use Stackkit\LaravelGoogleCloudTasksQueue\CloudTasksApi;
-use Stackkit\LaravelGoogleCloudTasksQueue\CloudTasksQueue;
+use dimitriadamouLaravelGoogleCloudTasksQueue\IncomingTask;
+use dimitriadamouLaravelGoogleCloudTasksQueue\CloudTasksApi;
+use dimitriadamouLaravelGoogleCloudTasksQueue\CloudTasksQueue;
 
 class TaskHandlerTest extends TestCase
 {

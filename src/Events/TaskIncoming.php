@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Stackkit\LaravelGoogleCloudTasksQueue\Events;
+namespace dimitriadamouLaravelGoogleCloudTasksQueue\Events;
 
-use Stackkit\LaravelGoogleCloudTasksQueue\IncomingTask;
+use dimitriadamouLaravelGoogleCloudTasksQueue\IncomingTask;
 
 class TaskIncoming
 {

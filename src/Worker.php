@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Stackkit\LaravelGoogleCloudTasksQueue;
+namespace dimitriadamouLaravelGoogleCloudTasksQueue;
 
 use function Safe\set_time_limit;
 
