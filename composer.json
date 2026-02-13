@@ -1,5 +1,5 @@
 {
-    "name": "stackkit/laravel-google-cloud-tasks-queue",
+    "name": "dimitriadamou/laravel-google-cloud-tasks-queue",
     "description": "Google Cloud Tasks queue driver for Laravel",
     "keywords": ["laravel", "queue", "queues", "google", "cloudtasks", "cloud", "run"],
     "license": "MIT",
@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Stackkit\\LaravelGoogleCloudTasksQueue\\": "src/"
+            "dimitriadamou\\LaravelGoogleCloudTasksQueue\\": "src/"
         }
     },
     "autoload-dev": {
@@ -34,7 +34,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Stackkit\\LaravelGoogleCloudTasksQueue\\CloudTasksServiceProvider"
+                "dimitriadamou\\LaravelGoogleCloudTasksQueue\\CloudTasksServiceProvider"
             ]
         }
     },
