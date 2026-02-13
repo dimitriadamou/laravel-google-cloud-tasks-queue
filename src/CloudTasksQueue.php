@@ -275,17 +275,17 @@ class CloudTasksQueue extends LaravelQueue implements QueueContract
                 $appEngineRequest = new AppEngineHttpRequest;
                 $appEngineRequest->setRelativeUri($path);
 
+                if (! empty($this->config['app_engine_service'])) {
+                    $routing = new AppEngineRouting;
+                    $routing->setService($this->config['app_engine_service']);
+                    $appEngineRequest->setAppEngineRouting($routing);
+                }
+
             }
 
             $appEngineRequest->setHttpMethod(HttpMethod::POST);
             $appEngineRequest->setBody(json_encode($payload));
             $appEngineRequest->setHeaders($headers);
-
-            if (! empty($this->config['app_engine_service'])) {
-                $routing = new AppEngineRouting;
-                $routing->setService($this->config['app_engine_service']);
-                $appEngineRequest->setAppEngineRouting($routing);
-            }
 
             $task->setAppEngineHttpRequest($appEngineRequest);
         } elseif (! empty($this->config['cloud_run_job'])) {
