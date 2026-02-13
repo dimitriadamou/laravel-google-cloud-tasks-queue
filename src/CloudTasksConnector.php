@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace dimitriadamouLaravelGoogleCloudTasksQueue;
+namespace Stackkit\LaravelGoogleCloudTasksQueue;
 
 use Google\Cloud\Tasks\V2\Client\CloudTasksClient;
 use Illuminate\Queue\Connectors\ConnectorInterface;

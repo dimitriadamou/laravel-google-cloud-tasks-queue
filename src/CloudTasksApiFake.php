@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace dimitriadamouLaravelGoogleCloudTasksQueue;
+namespace Stackkit\LaravelGoogleCloudTasksQueue;
 
 use Closure;
 use PHPUnit\Framework\Assert;

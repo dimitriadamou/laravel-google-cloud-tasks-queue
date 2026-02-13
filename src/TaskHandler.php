@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace dimitriadamouLaravelGoogleCloudTasksQueue;
+namespace Stackkit\LaravelGoogleCloudTasksQueue;
 
 use Exception;
 use Illuminate\Container\Container;
 use Illuminate\Queue\WorkerOptions;
 use Google\Cloud\Tasks\V2\Client\CloudTasksClient;
-use dimitriadamouLaravelGoogleCloudTasksQueue\Events\TaskIncoming;
+use Stackkit\LaravelGoogleCloudTasksQueue\Events\TaskIncoming;
 
 /**
  * @phpstan-import-type QueueConfig from CloudTasksConnector

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace dimitriadamouLaravelGoogleCloudTasksQueue\Events;
+namespace Stackkit\LaravelGoogleCloudTasksQueue\Events;
 
 use Illuminate\Contracts\Queue\Job;
 

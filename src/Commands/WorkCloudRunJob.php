@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace dimitriadamouLaravelGoogleCloudTasksQueue\Commands;
+namespace Stackkit\LaravelGoogleCloudTasksQueue\Commands;
 
 use Exception;
 use Illuminate\Console\Command;
@@ -12,11 +12,11 @@ use function Safe\base64_decode;
 use Illuminate\Container\Container;
 use Illuminate\Queue\WorkerOptions;
 use Illuminate\Support\Facades\Storage;
-use dimitriadamouLaravelGoogleCloudTasksQueue\Worker;
+use Stackkit\LaravelGoogleCloudTasksQueue\Worker;
 use Google\Cloud\Tasks\V2\Client\CloudTasksClient;
-use dimitriadamouLaravelGoogleCloudTasksQueue\IncomingTask;
-use dimitriadamouLaravelGoogleCloudTasksQueue\CloudTasksJob;
-use dimitriadamouLaravelGoogleCloudTasksQueue\CloudTasksQueue;
+use Stackkit\LaravelGoogleCloudTasksQueue\IncomingTask;
+use Stackkit\LaravelGoogleCloudTasksQueue\CloudTasksJob;
+use Stackkit\LaravelGoogleCloudTasksQueue\CloudTasksQueue;
 
 /**
  * Artisan command to process Cloud Tasks jobs via Cloud Run Jobs.
@@ -30,7 +30,7 @@ use dimitriadamouLaravelGoogleCloudTasksQueue\CloudTasksQueue;
  *
  * The connection is extracted from the payload itself.
  *
- * @phpstan-import-type QueueConfig from \dimitriadamouLaravelGoogleCloudTasksQueue\CloudTasksConnector
+ * @phpstan-import-type QueueConfig from \Stackkit\LaravelGoogleCloudTasksQueue\CloudTasksConnector
  */
 class WorkCloudRunJob extends Command
 {

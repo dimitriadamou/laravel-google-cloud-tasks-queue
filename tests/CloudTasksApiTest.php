@@ -11,7 +11,7 @@ use Google\Cloud\Tasks\V2\HttpMethod;
 use Google\Cloud\Tasks\V2\HttpRequest;
 use PHPUnit\Framework\Attributes\Test;
 use Google\Cloud\Tasks\V2\Client\CloudTasksClient;
-use dimitriadamouLaravelGoogleCloudTasksQueue\CloudTasksApi;
+use Stackkit\LaravelGoogleCloudTasksQueue\CloudTasksApi;
 
 class CloudTasksApiTest extends TestCase
 {

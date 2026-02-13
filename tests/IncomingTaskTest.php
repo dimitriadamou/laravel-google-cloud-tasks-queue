@@ -10,9 +10,9 @@ use Tests\Support\EncryptedJob;
 use Illuminate\Support\Facades\Event;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Attributes\TestWith;
-use dimitriadamouLaravelGoogleCloudTasksQueue\IncomingTask;
-use dimitriadamouLaravelGoogleCloudTasksQueue\CloudTasksApi;
-use dimitriadamouLaravelGoogleCloudTasksQueue\Events\TaskIncoming;
+use Stackkit\LaravelGoogleCloudTasksQueue\IncomingTask;
+use Stackkit\LaravelGoogleCloudTasksQueue\CloudTasksApi;
+use Stackkit\LaravelGoogleCloudTasksQueue\Events\TaskIncoming;
 
 class IncomingTaskTest extends TestCase
 {
